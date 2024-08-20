@@ -24,9 +24,9 @@ export function CarouselPlugin() {
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="">
+            <div className="m-10">
               <Card className="border-none shadow-none">
-                <CardContent className="flex aspect-square items-center justify-center">
+                <CardContent className="flex p-0 aspect-square items-center justify-center">
                   <img src={illustration} alt={"illustration"} className="" />
                 </CardContent>
               </Card>

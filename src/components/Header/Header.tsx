@@ -21,7 +21,7 @@ export const Header = () => {
       <header className="p-2 border border-1 border-solid border-slate-200 rounded-lg">
         <NavigationMenu>
           <NavigationMenuList className="grid grid-cols-3 items-center">
-            <img src={IMAGE_LINK} className="h-6" />
+            <img src={IMAGE_LINK} alt="logo" className="h-6" />
 
             <div className="flex justify-center space-x-4">
               {MENU_ITEMS.map(
