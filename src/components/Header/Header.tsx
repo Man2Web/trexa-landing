@@ -27,7 +27,7 @@ export const Header = () => {
               {MENU_ITEMS.map(
                 (item: { name: string; link: string }, index: number) => {
                   return (
-                    <NavigationMenuItem key={index}>
+                    <NavigationMenuItem className="hidden md:block" key={index}>
                       <NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <NavigationMenuLink>{item.link}</NavigationMenuLink>
