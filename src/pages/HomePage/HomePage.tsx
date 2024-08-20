@@ -41,6 +41,7 @@ export const HomePage = () => {
         "You can choose from a wide range of proctoring functions as per your requirements. Face Detection, Loud Noise Detection, Monitor User Exam.",
     },
   ];
+  const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
   return (
     <main>
       <Header />
@@ -58,7 +59,9 @@ export const HomePage = () => {
             using AI
           </span>
         </h1>
-        <Button>Schedule Demo</Button>
+        <a target="_blank" href={MeetLink}>
+          <Button>Schedule Demo</Button>
+        </a>
       </section>
       {/* Trusted by section */}
       <section className="mt-24 md:mt-60">
@@ -108,7 +111,9 @@ export const HomePage = () => {
               )}
             </div>
           </div>
-          <Button>Know More</Button>
+          <a target="_blank" href={MeetLink}>
+            <Button>Schedule Demo</Button>
+          </a>
         </section>
         <section className="mt-12">
           <h1 className="font-semibold text-3xl py-8">
@@ -140,7 +145,9 @@ export const HomePage = () => {
             </div>
             <div>{CarouselPlugin()}</div>
           </div>
-          <Button>Know More</Button>
+          <a target="_blank" href={MeetLink}>
+            <Button>Schedule Demo</Button>
+          </a>
         </section>
       </section>
       {/* Features section */}
@@ -160,7 +167,9 @@ export const HomePage = () => {
           })}
         </div>
         <div className="pt-20">
-          <Button>Schedule Demo</Button>
+          <a target="_blank" href={MeetLink}>
+            <Button>Schedule Demo</Button>
+          </a>
         </div>
       </section>
       <Footer />

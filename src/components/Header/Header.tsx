@@ -15,7 +15,7 @@ export const Header = () => {
     { name: "Item Three", link: "Link Three" },
     { name: "Item Four", link: "Link Four" },
   ];
-
+  const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
   return (
     <section>
       <header className="p-2 border border-1 border-solid border-slate-200 rounded-lg">
@@ -38,7 +38,9 @@ export const Header = () => {
               )}
             </div>
             <div className="flex justify-end">
-              <Button>Schedule Demo</Button>
+              <a target="_blank" href={MeetLink}>
+                <Button>Schedule Demo</Button>
+              </a>
             </div>
           </NavigationMenuList>
         </NavigationMenu>
