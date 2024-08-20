@@ -11,7 +11,7 @@ function App() {
   ]);
 
   return (
-    <section className="py-2 px-4 md:py-10 md:px-44">
+    <section className="py-2 px-4 md:py-8 md:px-[25em]">
       <RouterProvider router={router} />
     </section>
   );

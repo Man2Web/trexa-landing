@@ -18,16 +18,19 @@ export const Header = () => {
   const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
   return (
     <section>
-      <header className="p-2 border border-1 border-solid border-slate-200 rounded-lg">
+      <header className="backdrop-blur-sm bg-white/30 p-2 border border-1 border-solid border-slate-200 rounded-lg">
         <NavigationMenu>
           <NavigationMenuList className="grid grid-cols-3 items-center">
             <img src={IMAGE_LINK} alt="logo" className="h-6" />
 
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-end space-x-4">
               {MENU_ITEMS.map(
                 (item: { name: string; link: string }, index: number) => {
                   return (
-                    <NavigationMenuItem className="hidden md:block" key={index}>
+                    <NavigationMenuItem
+                      className="hidden md:block text-slate-400"
+                      key={index}
+                    >
                       <NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <NavigationMenuLink>{item.link}</NavigationMenuLink>

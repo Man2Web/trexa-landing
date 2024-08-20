@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Header } from "../../components/header/Header";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { CarouselPlugin } from "@/components/carousel/CarouselPlugin";
 import { LuBrainCircuit } from "react-icons/lu";
 
 import netflix_logo from "../../assets/trusted_by/netflix_logo.png";
@@ -16,7 +15,6 @@ import youtube_logo from "../../assets/trusted_by/youtube_logo.png";
 import prime_logo from "../../assets/trusted_by/prime_logo.png";
 import play_logo from "../../assets/trusted_by/play_logo.png";
 import { Footer } from "@/components/footer/Footer";
-import { CiHeart } from "react-icons/ci";
 
 export const HomePage = () => {
   const IMAGES_ARR = [
@@ -84,48 +82,75 @@ export const HomePage = () => {
         </div>
       </section>
       {/* Features section */}
-      <section>
-        <Card className="backdrop-blur-sm bg-white/30">
-          <CardHeader>
-            <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
-              <CiHeart />
+      <section className="md:px-28">
+        <section className="mt-12">
+          <h1 className="font-semibold text-3xl py-8">
+            Create Test With Wide Range Of Options
+          </h1>
+          <div className="flex flex-col lg:flex-row justify-center items-center p-4 gap-4 md:gap-12">
+            <div>{CarouselPlugin()}</div>
+            <div className="flex-1">
+              {ACCORD_DATA.map(
+                (item: { title: string; content: string }, index) => {
+                  return (
+                    <Accordion
+                      key={index}
+                      type="single"
+                      collapsible
+                      className="w-full"
+                    >
+                      <AccordionItem value={`item-${index}`}>
+                        <AccordionTrigger className="text-left">
+                          {item.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-left">
+                          {item.content}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  );
+                }
+              )}
             </div>
-            <CardTitle className="font-bold tracking-tighter">
-              Lorem Ipsum
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex">
-            <div className="bg-slate-500 h-auto w-1/2"></div>
-            <div className="w-1/2">
-              {Array.from({ length: 3 }).map((_, index) => {
-                return (
-                  <div key={index} className="p-4">
-                    <div className="flex items-center">
-                      <div className="p-2 text-md">
-                        <LuBrainCircuit />
-                      </div>
-                      <p className="text-sm font-semibold tracking-tight">
-                        Lorem ipsum dolor sit amet
-                      </p>
-                    </div>
-                    <p className="text-sm font-normal text-left tracking-tight text-slate-400">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                  </div>
-                );
-              })}
-              <div className="flex gap-2 justify-center">
-                <Button size="sm" variant="outline">
-                  Lorem Ipsum
-                </Button>
-                <Button size="sm">Lorem Ipsum</Button>
-              </div>
+          </div>
+          <a target="_blank" href={MeetLink}>
+            <Button>Schedule Demo</Button>
+          </a>
+        </section>
+        <section className="mt-12">
+          <h1 className="font-semibold text-3xl py-8">
+            Schedule your Text with TrExa
+          </h1>
+          <div className="flex flex-col-reverse lg:flex-row justify-center items-center p-4 gap-4 md:gap-12">
+            <div className="flex-1">
+              {ACCORD_DATA.map(
+                (item: { title: string; content: string }, index) => {
+                  return (
+                    <Accordion
+                      key={index}
+                      type="single"
+                      collapsible
+                      className="w-full"
+                    >
+                      <AccordionItem value={`item-${index}`}>
+                        <AccordionTrigger className="text-left">
+                          {item.title}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-left">
+                          {item.content}
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                  );
+                }
+              )}
             </div>
-          </CardContent>
-          <CardFooter></CardFooter>
-        </Card>
+            <div>{CarouselPlugin()}</div>
+          </div>
+          <a target="_blank" href={MeetLink}>
+            <Button>Schedule Demo</Button>
+          </a>
+        </section>
       </section>
       {/* Features section */}
       <section className="my-12 md:px-28 md:my-24">
