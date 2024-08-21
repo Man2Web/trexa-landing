@@ -37,7 +37,7 @@ export const ExamFeatures = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-2 md:grid-cols-4">
             {Array.from({ length: 8 }).map((_, index) => {
               const Icon = FEAT_IMAGE[index];
               return (

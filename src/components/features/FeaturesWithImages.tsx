@@ -39,9 +39,9 @@ export const FeaturesWithImages = () => {
             Lorem Ipsum
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex">
-          <div className="bg-slate-500/30 backdrop-blur-sm h-auto w-1/2 rounded-lg"></div>
-          <div className="w-1/2">
+        <CardContent className="grid md:grid-cols-2">
+          <div className="bg-slate-500/30 backdrop-blur-sm h-[300px] rounded-lg"></div>
+          <div className="">
             {FEAT_DETAILS.map(
               (feature: { question: string; content: string }, index) => {
                 const Icon = ICONS[index];

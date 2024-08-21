@@ -11,7 +11,7 @@ function App() {
   ]);
 
   return (
-    <section className="py-2 px-4 md:py-8 md:px-[25em]">
+    <section className="py-2 px-4 md:py-8 md:px-[25em] overflow-scroll absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
       <RouterProvider router={router} />
     </section>
   );

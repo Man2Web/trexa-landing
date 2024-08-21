@@ -43,38 +43,37 @@ export const PriceCalculator = () => {
             Compare the pricing with the traditional method
           </CardTitle>
         </CardHeader>
-        <CardContent className="grid grid-cols-2">
+        <CardContent className="grid md:grid-cols-2 items-center">
           <div className="p-2 ">
-              {FEAT_DETAILS.map(
-                (feature: { question: string; content: string }, index) => {
-                  const Icon = ICONS[index];
-                  return (
-                    <div key={index} className="p-4">
-                      <div className="flex items-center">
-                        <div className="p-2 text-md">
-                          <Icon />
-                        </div>
-                        <p className="text-sm font-semibold tracking-tight">
-                          {feature.question}
-                        </p>
+            {FEAT_DETAILS.map(
+              (feature: { question: string; content: string }, index) => {
+                const Icon = ICONS[index];
+                return (
+                  <div key={index} className="p-4">
+                    <div className="flex items-center">
+                      <div className="p-2 text-md">
+                        <Icon />
                       </div>
-                      <p className="text-sm font-normal text-left tracking-tight text-slate-400">
-                        {feature.content}
+                      <p className="text-sm font-semibold tracking-tight">
+                        {feature.question}
                       </p>
                     </div>
-                  );
-                }
-              )}
-              <div className="flex gap-2 justify-center">
-                <Button size="sm" variant="outline">
-                  Start Free Trail
-                </Button>
-                <Button size="sm">Schedule Demo</Button>
-              </div>
+                    <p className="text-sm font-normal text-left tracking-tight text-slate-400">
+                      {feature.content}
+                    </p>
+                  </div>
+                );
+              }
+            )}
+            <div className="flex gap-2 justify-center">
+              <Button size="sm" variant="outline">
+                Start Free Trail
+              </Button>
+              <Button size="sm">Schedule Demo</Button>
+            </div>
           </div>
           <div className="p-2 flex flex-col gap-4">
             <Slider
-              className="bg-red-100"
               onValueChange={(e) => setSliderValue(e)}
               defaultValue={sliderValue}
               min={10}
