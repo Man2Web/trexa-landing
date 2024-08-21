@@ -1,31 +1,15 @@
-import { Button } from "@/components/ui/button";
 import { Header } from "../../components/header/Header";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { LuBrainCircuit } from "react-icons/lu";
-
-import netflix_logo from "../../assets/trusted_by/netflix_logo.png";
-import google_logo from "../../assets/trusted_by/google_logo.png";
-import youtube_logo from "../../assets/trusted_by/youtube_logo.png";
-import prime_logo from "../../assets/trusted_by/prime_logo.png";
-import play_logo from "../../assets/trusted_by/play_logo.png";
 import { Footer } from "@/components/footer/Footer";
-import { CiHeart } from "react-icons/ci";
+import { Title } from "@/components/title/Title";
+import { TrustedBy } from "@/components/title/TrustedBy";
+import { FeaturesWithImages } from "@/components/features/FeaturesWithImages";
+import { NumbersSection } from "@/components/features/NumbersSection";
+import { Content } from "@/components/content/Content";
+import { ExamFeatures } from "@/components/features/ExamFeatures";
+import { PriceCalculator } from "@/components/priceCalculator/PriceCalculator";
 
 export const HomePage = () => {
-  const IMAGES_ARR = [
-    { name: "netflix logo", link: netflix_logo },
-    { name: "google logo", link: google_logo },
-    { name: "youtube logo", link: youtube_logo },
-    { name: "prime logo", link: prime_logo },
-    { name: "play logo", link: play_logo },
-  ];
+
   const ACCORD_DATA = [
     {
       title: "Choose your Question",
@@ -43,112 +27,67 @@ export const HomePage = () => {
         "You can choose from a wide range of proctoring functions as per your requirements. Face Detection, Loud Noise Detection, Monitor User Exam.",
     },
   ];
-  const MeetLink = "https://calendly.com/harsha-vardhan-man2web/30min";
+
+  const FEAT_DETAILS_1 = [
+    {
+      question: "Schedule Your Test",
+      content:
+        "Set up test dates and times in advance. Allow candidates to take the test at their convenience within the scheduled window.",
+    },
+    {
+      question: "Randomize Question Order",
+      content:
+        "Enhance test integrity by shuffling the order of questions for each candidate, ensuring a unique experience.",
+    },
+    {
+      question: "Set Time Limits",
+      content:
+        "Apply time constraints on the entire test or individual sections to challenge candidates under timed conditions.",
+    },
+    {
+      question: "Customize Scoring Rules",
+      content:
+        "Define scoring criteria for your test. Assign different weights to questions based on their difficulty level.",
+    },
+    {
+      question: "Enable Automated Grading",
+      content:
+        "Save time with automated grading. Get instant results and detailed analytics after test completion.",
+    },
+    {
+      question: "Provide Instant Feedback",
+      content:
+        "Give candidates immediate feedback on their performance, highlighting correct answers and areas for improvement.",
+    },
+    {
+      question: "Monitor Live Proctoring",
+      content:
+        "Ensure test integrity with live proctoring. Monitor candidates in real-time through video and screen recording.",
+    },
+    {
+      question: "Export Test Results",
+      content:
+        "Easily export test results in various formats. Share detailed reports with candidates and stakeholders.",
+    },
+  ];
+
   return (
     <main>
       <Header />
       {/* Header section */}
-      <section className="mt-24 md:mt-32">
-        <h1 className="my-10 font-bold text-4xl md:text-6xl tracking-tight">
-          Increase your organization performance{" "}
-          <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text leading-tight">
-            using AI
-          </span>
-        </h1>
-        <p className="my-4 md:m-10 font-semibold text-lg text-slate-400 tracking-tight">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <a target="_blank" href={MeetLink}>
-          <Button>Schedule Demo</Button>
-        </a>
-      </section>
+      <Title />
       {/* Trusted by section */}
-      <section className="mt-24 md:mt-42">
-        <h1 className="font-semibold text-slate-400 text-sm tracking-tighter">
-          Trusted by
-        </h1>
-        <div className="flex flex-wrap md:flex-row gap-4 md:gap-8 lg:gap-20 justify-center">
-          {IMAGES_ARR.map((logo, index) => {
-            return (
-              <img
-                key={index}
-                src={logo.link}
-                alt={logo.name}
-                className="w-20 object-contain"
-              />
-            );
-          })}
-        </div>
-      </section>
+      <TrustedBy />
       {/* Features section */}
-      <section>
-        <Card className="backdrop-blur-sm bg-white/30">
-          <CardHeader>
-            <div className="border boder-solid-slate-100 rounded-lg p-2 text-xl mx-auto">
-              <CiHeart />
-            </div>
-            <CardTitle className="font-bold tracking-tighter">
-              Lorem Ipsum
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="flex">
-            <div className="bg-slate-500 h-auto w-1/2"></div>
-            <div className="w-1/2">
-              {Array.from({ length: 3 }).map((_, index) => {
-                return (
-                  <div key={index} className="p-4">
-                    <div className="flex items-center">
-                      <div className="p-2 text-md">
-                        <LuBrainCircuit />
-                      </div>
-                      <p className="text-sm font-semibold tracking-tight">
-                        Lorem ipsum dolor sit amet
-                      </p>
-                    </div>
-                    <p className="text-sm font-normal text-left tracking-tight text-slate-400">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
-                    </p>
-                  </div>
-                );
-              })}
-              <div className="flex gap-2 justify-center">
-                <Button size="sm" variant="outline">
-                  Lorem Ipsum
-                </Button>
-                <Button size="sm">Lorem Ipsum</Button>
-              </div>
-            </div>
-          </CardContent>
-          <CardFooter></CardFooter>
-        </Card>
-      </section>
+      <NumbersSection />
       {/* Features section */}
-      <section className="my-12 md:px-28 md:my-24">
-        <h1 className="font-semibold text-2xl pb-20">And Many More...</h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-4">
-          {Array.from({ length: 8 }).map((_, index) => {
-            return (
-              <div
-                key={index}
-                className="text-6xl text-center flex flex-col items-center gap-2"
-              >
-                <LuBrainCircuit />
-                <p className="text-sm font-semibold">Lorem Ipsum</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="pt-20">
-          <a target="_blank" href={MeetLink}>
-            <Button>Schedule Demo</Button>
-          </a>
-        </div>
-      </section>
+      <FeaturesWithImages />
+      {/* Content section */}
+      <Content />
+      {/* Features section */}
+      <ExamFeatures />
+      {/* Features section */}
+      <PriceCalculator />
       <Footer />
     </main>
   );

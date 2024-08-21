@@ -45,24 +45,7 @@ export const HomePage = () => {
   return (
     <main>
       <Header />
-      {/* Header section */}
-      <section className="mt-24 md:mt-32">
-        <h1 className="my-10 font-bold text-4xl md:text-6xl tracking-tight">
-          Increase your organization performance{" "}
-          <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text leading-tight">
-            using AI
-          </span>
-        </h1>
-        <p className="my-4 md:m-10 font-semibold text-lg text-slate-400 tracking-tight">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <a target="_blank" href={MeetLink}>
-          <Button>Schedule Demo</Button>
-        </a>
-      </section>
+
       {/* Trusted by section */}
       <section className="mt-24 md:mt-42">
         <h1 className="font-semibold text-slate-400 text-sm tracking-tighter">
